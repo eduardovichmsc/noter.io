@@ -39,10 +39,10 @@ function deleteNoteElement(deleteBtn) {
    const index = deleteBtn.getAttribute('data-index');
    const noteWrapper = deleteBtn.closest('.note-wrapper');
    
-   notes.splice(index, 1); // Remove the corresponding note from the notes array
-   updateLocalStorage(); // Update localStorage after removing the note
+   notes.splice(index, 1);
+   updateLocalStorage();
 
-   noteWrapper.remove(); // Remove the note-wrapper from the DOM
+   noteWrapper.remove();
 }
 
 function addNewTextArea(btn) {
@@ -76,7 +76,7 @@ function updateNotes() {
          items,
       };
 
-      updatedNotes.push(updatedNote); // Push each updated note directly
+      updatedNotes.push(updatedNote);
    });
 
    const filteredNotes = updatedNotes.filter((note) => note !== undefined);
@@ -135,7 +135,7 @@ function renderNotes() {
    const notesContainer = document.querySelector('.wrapper-body');
 
    notes.forEach((note, index) => {
-   const noteElem = createNoteElement(note, index); // Pass index to createNoteElement
+   const noteElem = createNoteElement(note, index);
    notesContainer.appendChild(noteElem);
 });
    
@@ -163,6 +163,13 @@ renderNotes();
 
 
 
+
+
+
+
+
+
+// background
 $('.change-background').on('click', function(){
    $('.customize-wrapper').fadeIn(100);
 });
