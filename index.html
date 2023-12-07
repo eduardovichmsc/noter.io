@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+   
+   <link rel="stylesheet" href="stylesheet.css">
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   <div class="app flex align-center justify-center">
+      <div class="dark-opacity" style="display: none;"></div>
+      
+      <div class="welcome-wrapper auth-wrapper flex align-center justify-center"  style="display: none;">
+         <div class="auth-container flex col gap-10">
+            <h4 class="welcome-text note-title">Рады видеть вас на `noter.io`</h4>
+            <p>Перед использованием просим вас заполнить данные,</p>
+            <input type="text" class="auth-input note-item item-shadow" placeholder="Имя пользователя">
+            <button class="note-item note-item-add start-button item-shadow">Начать</button>
+            <p class="note-item auth-warning" style="display: none;">Введите имя пользователя.</p>
+         </div>
+      </div>
+
+      <div class="main-container flex col align-center" style="display: none;">
+         <span class="nav flex gap-10 align-center" style="align-self: flex-center;">
+            <button class="note-item note-item-add change-background width-fit">customize</button>
+            <button class="note-item note-item-add erase-data">localstorage.clear()</button>
+         </span>
+         <div class="wrapper-body flex wrap justify-center">
+            
+         </div>
+         <button class="add-btn flex justify-center align-center small-shadow">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M6 8H0V6H6V0H8V6H14V8H8V14H6V8Z" fill="black" class="add-btn-svg"/>
+            </svg>
+         </button>
+      </div>
+
+      <div class="customize-wrapper" style="display: none;">
+         <div class="welcome-wrapper bgselect-container flex justify-center align-center">
+            <div class="auth-container flex col gap-10">
+               <span class="flex justify-between">
+                  <h4 class="note-title">Выбор фона</h4>
+                  <button class="note-delete bgselect-close flex justify-center align-center">
+                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.4 14L0 12.6L5.6 7L0 1.4L1.4 0L7 5.6L12.6 0L14 1.4L8.4 7L14 12.6L12.6 14L7 8.4L1.4 14Z" fill="black"/>
+                     </svg>
+                  </button>
+               </span>
+               <button class="note-item item-shadow bgselect-color">Сплошной цвет</button>
+               <button class="note-item item-shadow bgselect-photo">Добавить картинку</button>
+
+               
+               <div class="flex col gap-10 bgselect-color-container" style="display: none;">
+                  <button class="note-item auth-input item-shadow bgselect-color-button" data-bgcolor="white">Белый</button>
+                  <button class="note-item auth-input item-shadow bgselect-color-button" data-bgcolor="dark">Темный</button>
+                  <button class="note-item auth-input item-shadow bgselect-color-button" data-bgcolor="purple">Фиолет</button>
+                  <button class="note-item auth-input item-shadow bgselect-color-button" data-bgcolor="red">Красный</button>
+
+               </div>
+               
+               <div class="flex col gap-10 bgselect-photo-container" style="display: none;">
+                  <input type="text" class="note-item auth-input item-shadow bgselect-input" placeholder="Ссылка на картинку">
+                  <button class="note-item note-item-add bgselect-submit">Добавить</button>
+               </div>
+            </div>
+            
+         </div>
+      </div>
+   </div>
+   
+
+   
+   
+   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+   <script src="render.js"></script>
+   <script src="scripts.js"></script>
+   <script src="anim.js"></script>
+</body>
+</html>
