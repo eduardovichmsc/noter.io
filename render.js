@@ -228,8 +228,16 @@ showDarkOpacity();
 
 $('.bgselect-color-button').on('click', function(){
    const bgColor = $(this).attr('data-bgcolor');
-   localStorage.setItem('bg-url', '');
-   localStorage.setItem('bg-color', bgColor);
-   $('.app').css('background-color', `--${bgColor}`);
+   function fromColorToUrl(){
+      localStorage.setItem('bg-color', bgColor);
+      localStorage.setItem('bg-url', '');
+      $('.app').css('background-color', `--${bgColor}`);
+   };
+   if(localStorage.getItem('bg-url')){
+      fromColorToUrl();
+      window.location.href = "";
+   } else {
+      fromColorToUrl();
+   }
    setBgColor();
 });
