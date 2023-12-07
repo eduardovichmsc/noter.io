@@ -34,7 +34,6 @@ function checkActiveUser(){
 checkActiveUser();
 
 
-
 $('.erase-data').on('click', function(){
    localStorage.clear();
    window.location.href="";
